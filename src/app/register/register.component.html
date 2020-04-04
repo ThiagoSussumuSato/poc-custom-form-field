@@ -1,0 +1,12 @@
+<mat-card>
+    <form [formGroup]="registerForm" (submit)="send()">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="userName" placeholder="Your Name" value="">
+      </mat-form-field>
+      <br>
+      <app-custom-select [parentFormGroup]="registerForm" idSupportTable="1"></app-custom-select>
+      <br>
+      <button mat-button [disabled]="registerForm.invalid">Submit</button>
+    </form>
+</mat-card>

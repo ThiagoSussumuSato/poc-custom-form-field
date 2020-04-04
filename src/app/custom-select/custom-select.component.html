@@ -1,0 +1,8 @@
+<mat-form-field [formGroup]="parentFormGroup">
+  <mat-label>{{ title }}</mat-label>
+  <mat-select [formControlName]="name ? name : 'supportTable'">
+    <mat-option *ngFor="let supportTableData of supportTableDatas" [value]="supportTableData.id">
+      {{supportTableData.description}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
